@@ -1,0 +1,267 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #030303;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #363636;
+    display: flex;
+
+}
+
+h1{
+    color: whitesmoke;
+    align-self: center;
+    margin-left: 28rem;
+}
+
+
+.search {
+    margin: 3rem;
+    margin-left: 12rem;
+    background-color: transparent;
+    border: 2px solid #e9e9ec;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #050505;
+    outline: none;
+}
+
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: 265px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.8rem;
+
+}
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+} */
+/* Reset some default styles */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*{
+     font-family: "Poppins", sans-serif;
+
+}
+body {
+    background-color: black; /* Light gray background */
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: rgb(119, 127, 134); /* Dark blue header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+h1 {
+    color: #ffffff; /* White text color */
+    font-size: 2rem;
+}
+
+.search {
+    background-color: #ffffff; /* White background */
+    border: 2px solid #ccc;
+    border-radius: 30px; /* Slightly rounded border */
+    color: #333333; /* Dark gray text color */
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.search::placeholder {
+    color: #999999; /* Light gray placeholder text */
+}
+
+.search:focus {
+    background-color: #ffffff; /* White background on focus */
+    outline: none;
+    border-color: #666666; /* Darker gray border on focus */
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.movie {
+    background-color: #000000; /* White card background */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 265px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #f4f4f4; /* Dark gray text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.movie-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.movie-info span {
+    /*background-color: #354a58; /* Dark blue background */
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-info span.green {
+    color: #00cc66; /* Green color */
+}
+
+.movie-info span.orange {
+    color: #ff9933; /* Orange color */
+}
+
+.movie-info span.red {
+    color: #ff3333; /* Red color */
+}
+
+.overview {
+    /* background-color: #ffffff; White background */
+    backdrop-filter: blur(20px);
+    padding: 1rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+    color: aliceblue;
+}
+
+.overview h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
